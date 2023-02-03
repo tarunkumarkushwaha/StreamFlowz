@@ -10,7 +10,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: sans-serif;
-  height: 100%;
+  /* overflow: scroll; */
+}
+
+.home{
+  cursor: pointer;
 }
 
 .flex-row-center {
@@ -35,10 +39,6 @@ body {
 
 .btn:hover {
   background: rgba(230, 41, 41, 0.678);
-}
-
-.nav-bar .fa {
-  display: none;
 }
 
 .nav-bar {
@@ -71,7 +71,7 @@ h2 {
 }
 
 #banner-title {
-  margin: 114px;
+  margin: 140px;
   color: white;
 }
 
@@ -159,107 +159,6 @@ a:hover {
   margin-bottom: 70px;
   display: block;
   color: rgba(230, 41, 41, 0.678);
-}
-
-/* .flip2 {
-
-}
-
-.flip3 {
-
-
-} */
-
-/* .flip4 {} */
-
-@keyframes flip2 {
-  0% {
-    margin-top: -280px;
-  }
-
-  5% {
-    margin-top: -140px;
-  }
-
-  50% {
-    margin-top: -140px;
-  }
-
-  99.99% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: -350px;
-  }
-}
-
-@keyframes flip3 {
-  0% {
-    margin-top: -420px;
-  }
-
-  5% {
-    margin-top: -280px;
-  }
-
-  33% {
-    margin-top: -280px;
-  }
-
-  38% {
-    margin-top: -140px;
-  }
-
-  66% {
-    margin-top: -140px;
-  }
-
-  99.99% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: -420px;
-  }
-}
-
-@keyframes flip4 {
-  0% {
-    margin-top: -560px;
-  }
-
-  5% {
-    margin-top: -420px;
-  }
-
-  25% {
-    margin-top: -420px;
-  }
-
-  30% {
-    margin-top: -280px;
-  }
-
-  50% {
-    margin-top: -280px;
-  }
-
-  55% {
-    margin-top: -140px;
-  }
-
-  75% {
-    margin-top: -140px;
-  }
-
-  99.99% {
-    margin-top: 0px;
-  }
-
-  100% {
-    margin-top: -420px;
-  }
 }
 
 .footer ul {
@@ -488,7 +387,7 @@ td.default {
 }
 
 /* playlist page  */
-.main-img {
+/* .main-img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -513,16 +412,16 @@ td.default {
   margin-left: 200px;
   display: flex;
   text-decoration: none;
-}
-
+} */
+/* 
 .main-cover h5 {
   width: 200px;
   margin-left: 200px;
   display: flex;
   text-decoration: none;
-}
+} */
 
-.play-all {
+/* .play-all {
   display: block;
   position: absolute;
   top: 150px;
@@ -570,4 +469,4 @@ audio {
 .lyrics p {
   color: white;
   font-size: 14px;
-}
+} */
