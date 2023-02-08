@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./homepage.css">
     <script src="script.js" defer></script>
 </head>
@@ -175,42 +176,24 @@
     </div>
     <!-- playlist -->
     <div id="playlist" class="invisible">
-        <div class="main-cover">
-            <div class="main-img">
-              <img src="./img/movie2.jpg" alt="a playlist" />
-            </div>
-    
-            <h1>Faded Away</h1>
-            <h3>First Album</h3>
-            <h5>Composed by a author</h5>
-            <div class="play-all">
-              Play all
-            </div>
-        <div class="play-video">
-              Play Video
-            </div>
-            <div class="play-video">
-              Play Video
-            </div>
-            <div class="play-audio">
-              <audio controls>
-                <source src="horse.ogg" type="audio/ogg" />
-                <source src="horse.mp3" type="audio/mpeg" />
+        <div id="trackslist">
+        </div>
+        <div class="playercontrols flex-column-center">
+            <audio id="myAudio">
+                <source type="audio/mp3">
                 Your browser does not support the audio element.
-              </audio>
+            </audio>
+            <div class="flex-row-center">
+                <img class="currentsongimg" src="img/movie 7.jpg" alt="no tracks selected">
+                <label id="currentsongname" for="range">mytrack</label>
+                <input type="range" name="range" id="range" value="0"></div>
+            <div class="flex-row-center">
+                <button class="playerbtn" onclick="previous()" type="button">Previous</button>
+                <button id="playbtn" class="playerbtn" onclick="playPause()" type="button">Play</button>
+                <button class="playerbtn" onclick="next()" type="button">Next</button>
             </div>
-            <div class="lyrics">
-              <h2>Behind the Lyrics:</h2><br>
-              <p>
-                Alan Olav Walker is an English-born Norwegian DJ and record
-                producer. In 2015, Walker received international acclaim after
-                releasing the single "Faded", which received multi-platinum
-                certifications in over 10 countries.
-              </p>
-            </div>
-          </div>
-          <br />
-    </div>
+        </div>
+        <br />
     </div>
     <div class="footer">
         <ul>
