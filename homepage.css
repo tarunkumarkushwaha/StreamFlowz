@@ -13,7 +13,7 @@ body {
   /* overflow: scroll; */
 }
 
-.home{
+#startpage {
   cursor: pointer;
 }
 
@@ -120,6 +120,12 @@ a:hover {
   background-color: rgba(88, 88, 88, 0.185);
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  top: 100%;
 }
 
 /* sign up  */
@@ -337,16 +343,19 @@ td.default {
   color: red;
 }
 
-.playercontrols{
+.playercontrols {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 85%;
+  height: 60px;
 }
 
-.playerbtn{
-  background-color: #dd9c94;
+.playerbtn {
+  background-color: #db5656;
   height: 40px;
-  width: 70px;
+  width: 50px;
   border-radius: 25px;
 }
 
@@ -355,11 +364,11 @@ td.default {
   color: wheat;
 }
 
-#playlist{
+#playlist {
   text-align: center;
 }
 
-.songbox{
+.songbox {
   height: 200px;
   padding: 5px;
   margin: 25px;
@@ -369,7 +378,7 @@ td.default {
   border-radius: 10px;
 }
 
-.songbox:hover{
+.songbox:hover {
   cursor: pointer;
   height: 205px;
   padding: 10px;
@@ -377,14 +386,18 @@ td.default {
   width: 155px;
 }
 
-.currentsongimg{
-  height: 90px;
-  width: 90px;
-  border-radius: 10px;
-  margin: 20px;
+#currentsongimage {
+  height: 80px;
+  width: 81px;
+  border-radius: 15px;
+  margin: 15px;
 }
 
-.songimg{
+#currentsongname {
+  margin: 15px;
+}
+
+.songimg {
   margin: 10px;
   border: 2px solid white;
   height: 100px;
@@ -392,17 +405,60 @@ td.default {
   border-radius: 10px;
 }
 
-.songnames{
+.songnames {
   text-align: center;
   margin: 10px;
 }
-#trackslist{
+
+#trackslist {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-#range{
+.controlbtns {
+  height: 100px;
+  padding: 10px;
+  margin: 5px;
+  background: #fa9797;
+  border-radius: 20px;
+}
+
+#range {
   width: 70vw;
   margin: 20px;
+}
+
+.slider {
+  /* position: absolute;
+  top: 70%;
+  right: 7%; */
+  height: 60px;
+  padding: 30px;
+  background: #fa9797;
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px #0a0a0a66;
+}
+
+.slider input[type="range"] {
+  -webkit-appearance: none !important;
+  width: 420px;
+  height: 2px;
+  background: black;
+  border: none;
+  outline: none;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 30px;
+  height: 30px;
+  background: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb:hover {
+  background: black;
 }
