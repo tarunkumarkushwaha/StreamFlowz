@@ -1,5 +1,6 @@
 import { soundtracks } from "/songs.js"
 let startpage = document.getElementById("startpage")
+let home = document.getElementById("home")
 let priceplan = document.getElementById("priceplan")
 let loginbox = document.getElementById("login-box")
 let bannertitle = document.getElementById("banner-title")
@@ -12,6 +13,10 @@ let range = document.getElementById('range')
 let plan = document.getElementById('plan')
 let signup = document.getElementById('signup')
 let footer = document.getElementById('footer')
+let search = document.getElementById('search')
+let prevbtn = document.getElementById('prevbtn')
+let nextbtn = document.getElementById('nextbtn')
+// let searchbtn = document.getElementById('searchbtn')
 
 // testing sountracks 
 
@@ -27,6 +32,21 @@ let footer = document.getElementById('footer')
 // }
 // ]
 
+// initiation 
+soundtracks.map((song) => {
+    tracks.innerHTML = tracks.innerHTML + `<div class="songbox" style="background-image:url(${song.bgimage})"><p class="songnames">${song.songname}</p></div>`
+});
+
+let setsong=soundtracks[0]
+
+// functions 
+const searcher = () => {
+    let searchvalue = search.value
+    let items = soundtracks.filter(item => item.songname.toLowerCase().includes(searchvalue.toLowerCase()))
+    tracks.innerHTML = items.map((song) => `<div class="songbox" style="background-image:url(${song.bgimage})">
+                                            <p class="songnames">${song.songname}</p></div>`)
+}
+
 const signupopener = () => {
     bannertitle.setAttribute("class", "invisible")
     loginbox.removeAttribute("class", "invisible")
@@ -34,6 +54,7 @@ const signupopener = () => {
     priceplan.setAttribute("class", "invisible")
     playlist.setAttribute("class", "invisible")
 }
+
 const startpageopener = () => {
     window.location.reload()
 }
@@ -60,9 +81,12 @@ let flag = false
 let progress
 
 let playPause = () => {
-    flag ? pauseAudio() : playAudio() ;
+    flag ? pauseAudio() : playAudio();
 }
 const playAudio = (e) => {
+    myAudio.setAttribute("src", setsong.tracklink)
+    currentsongname.innerText = setsong.songname
+    currentimage.setAttribute("src", setsong.bgimage)
     myAudio.play();
     playbtn.innerText = "||"
     flag = true
@@ -74,6 +98,25 @@ const pauseAudio = (e) => {
     flag = false
 }
 
+const next = () => {
+    if(soundtracks.indexOf(setsong)!=soundtracks.length-1){setsong = soundtracks[soundtracks.indexOf(setsong)+1]}
+    playAudio()
+}
+
+const previous = () => {
+    if(soundtracks.indexOf(setsong)!=0){setsong = soundtracks[soundtracks.indexOf(setsong)-1]}
+    playAudio()
+}
+
+// EventListeners 
+startpage.addEventListener('click', startpageopener)
+home.addEventListener('click', startpageopener)
+plan.addEventListener('click', planopener)
+signup.addEventListener('click', signupopener)
+playbtn.addEventListener('click', playPause)
+prevbtn.addEventListener('click', previous)
+nextbtn.addEventListener('click', next)
+search.addEventListener('keyup', searcher)
 myAudio.addEventListener("timeupdate", () => {
     progress = parseInt((myAudio.currentTime / myAudio.duration) * 100)
     range.value = progress
@@ -81,19 +124,12 @@ myAudio.addEventListener("timeupdate", () => {
 range.addEventListener('change', () => { myAudio.currentTime = parseInt(range.value * myAudio.duration / 100) })
 
 tracks.addEventListener('click', (e) => {
-    let setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
-    myAudio.setAttribute("src", setsong.tracklink)
-    currentsongname.innerText = setsong.songname
-    currentimage.setAttribute("src",setsong.bgimage)
+    setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
     playAudio()
-
 })
-
-soundtracks.map((song) => {
-    tracks.innerHTML = tracks.innerHTML + `<div class="songbox"><img class="songimg" src="${song.bgimage}" alt="song not loaded"><p class="songnames">${song.songname}</p></div>`
-})
-
-startpage.addEventListener('click',startpageopener)
-plan.addEventListener('click',planopener)
-signup.addEventListener('click',signupopener)
-playbtn.addEventListener('click',playPause)
+search.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searcher()
+    }
+});

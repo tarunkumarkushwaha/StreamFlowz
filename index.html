@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Streamflowz</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./homepage.css">
     <script src="script.js" type="module" defer></script>
@@ -16,8 +16,11 @@
             <div id="startpage">
                 <h2>StreamFlowz</h2>
             </div>
+            <div id="home" class="btn">Home</div>
             <div id="plan" class="btn">Price Plans</div>
             <div id="signup" class="btn">Sign up</div>
+            <input type="text" placeholder="search your songs" name="search" id="search">
+            <!-- <button id="searchbtn" type="button">Search</button> -->
         </div>
     </div>
     <!-- main page  -->
@@ -35,15 +38,12 @@
             <input type="text" name="email" placeholder="E-mail" />
             <input type="password" name="password" placeholder="Password" />
             <input type="password" name="password2" placeholder="Retype password" />
-
             <input type="submit" name="signup_submit" value="Signup" />
         </div>
 
         <div class="rightbox">
-
-
-            <button class="facebook">Log in with Facebook</button>
-            <button class="google">Log in with Google+</button>
+            <button type="button" class="facebook">Log in with Facebook</button>
+            <button type="button" class="google">Log in with Google+</button>
         </div>
         <div class="or">OR</div>
     </div>
@@ -51,22 +51,7 @@
     <!-- priceplan  -->
     <div id="priceplan" class="invisible">
         <article>
-            <ul>
-                <li class="Free">
-                    <button class="btn-list">Features</button>
-                </li>
-                <li class="Free">
-                    <button class="btn-list">Free Trail</button>
-                </li>
-                <li class="Standard">
-                    <button class="btn-list">Standard Plan</button>
-                </li>
-
-                <li class="Premium">
-                    <button class="btn-list">Premium Plan </button>
-                </li>
-
-            </ul>
+            <h3>Price Plans</h3>
             <table>
                 <thead>
                     <tr>
@@ -105,7 +90,7 @@
                     </tr>
 
                     <tr>
-                        <td>Includes free updates and new features as they become available</td>
+                        <td>Streaming on upto 3 devices</td>
                         <td class="default">
                             <span class="tick">&#10004;</span>
                         </td>
@@ -118,7 +103,7 @@
 
                     </tr>
                     <tr>
-                        <td>Streaming on 3 devices at a time</td>
+                        <td>Adfree experience</td>
                         <td class="default">
                             <span class="wrong">&#10006;</span>
                         </td>
@@ -131,9 +116,9 @@
 
                     </tr>
                     <tr>
-                        <td>High Definition</td>
+                        <td>High Quality</td>
                         <td class="default">
-                            <span class="tick">&#10004;</span>
+                            <span class="wrong">&#10006;</span>
                         </td>
                         <td class="default">
                             <span class="tick">&#10004;</span>
@@ -144,7 +129,7 @@
 
                     </tr>
                     <tr>
-                        <td>Ultra High Definition</td>
+                        <td>Ultra High Quality</td>
                         <td class="default">
                             <span class="wrong">&#10006;</span>
                         </td>
@@ -178,18 +163,18 @@
     <div id="playlist" class="invisible">
         <div id="trackslist"></div>
         <audio id="myAudio">
-            <source src="https://cdn.pixabay.com/download/audio/2022/09/29/audio_4491b5f092.mp3?filename=euphoria-121294.mp3" type="audio/mp3">
+            <source src="Audio/kirby-alarm-clock-127079.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
         <div class="playercontrols">
             <div class="flex-row-center controlbtns">
                 <img id="currentsongimage" src="img\movie5.jpg" alt="no image">
                 <div class="flex-column-center">
-                    <label id="currentsongname" for="range">Trance</label>
+                    <label id="currentsongname" for="range">Kirby alarm</label>
                     <div>
-                    <button class="playerbtn" type="button">Prev</button>
-                    <button id="playbtn" class="playerbtn" type="button">▶</button>
-                    <button class="playerbtn" type="button">Next</button>
+                        <button id="prevbtn" class="playerbtn" type="button">Prev</button>
+                        <button id="playbtn" class="playerbtn" type="button">▶</button>
+                        <button id="nextbtn" class="playerbtn" type="button">Next</button>
                     </div>
                 </div>
             </div>
@@ -200,11 +185,7 @@
         <br />
     </div>
     <div id="footer">
-        <ul>
-            <li>Privacy Policy</li>
-            <li>SiteMap</li>
-            <li>&copy; 2021 StreamFlowz Entertainment</li>
-        </ul>
+        &copy; 2021 StreamFlowz Entertainment
     </div>
 </body>
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
   margin: 0;
@@ -9,12 +9,32 @@ body {
   background-image: url(/img/slide2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: sans-serif;
-  /* overflow: scroll; */
+  font-family: 'Raleway', sans-serif;
 }
 
 #startpage {
   cursor: pointer;
+}
+
+#search {
+  height: 50px;
+  width: 350px;
+  padding: 10px;
+  position: relative;
+  top: 10px;
+  background-color: beige;
+  margin-left: 200px;
+  border-radius: 10px;
+}
+
+#searchbtn{
+  cursor: pointer;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 2px;
+  width: 100px;
+  background-color:#86332b;
+  color: aliceblue;
 }
 
 .flex-row-center {
@@ -33,6 +53,7 @@ body {
 .btn {
   cursor: pointer;
   text-decoration: none;
+  border-radius: 15px;
   padding: 20px 30px;
   margin: 0px;
 }
@@ -112,20 +133,10 @@ a:hover {
   color: rgba(230, 41, 41, 0.678);
 }
 
-.footer ul {
-  display: flex;
-  flex-direction: row;
-  height: 80px;
-  width: 100%;
-  background-color: rgba(88, 88, 88, 0.185);
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  position: absolute;
+#footer {
   text-align: center;
-  top: 100%;
+  color: #ffffff;
+  margin: 20px;
 }
 
 /* sign up  */
@@ -136,7 +147,7 @@ a:hover {
   width: 600px;
   height: 400px;
   background: #fffdfd;
-  border-radius: 2px;
+  border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 
 }
@@ -251,35 +262,15 @@ button.google:hover {
 }
 
 /* plan css */
+h3{
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 article {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 10%;
-  height: 1000px;
+  padding: 50px;
   position: relative;
-}
-
-ul {
-  top: 0px;
-  padding-bottom: 14px;
-}
-
-ul li .free .btn-list {
-  border: 2px solid red;
-}
-
-.btn-list {
-  width: 100%;
-  border: 1px solid #DDD;
-  padding: 10px;
-  background: #FFF;
-  height: 60px;
-  color: #999;
-  font-weight: bold;
-  font-size: 14px;
-  border-left: #a01c1c;
-  border-bottom: #a01c1c;
-  /* border: 2px solid red; */
 }
 
 li {
@@ -346,16 +337,18 @@ td.default {
 .playercontrols {
   display: flex;
   align-items: center;
+  background-color:#883026;
   justify-content: center;
   position: fixed;
-  top: 85%;
-  height: 60px;
+  width: 100%;
+  top: 80%;
+  height: 130px;
 }
 
 .playerbtn {
   background-color: #db5656;
   height: 40px;
-  width: 50px;
+  width: 40px;
   border-radius: 25px;
 }
 
@@ -369,21 +362,32 @@ td.default {
 }
 
 .songbox {
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 175px;
   padding: 5px;
   margin: 25px;
   width: 150px;
-  background-color: #f7909085;
-  border: 2px solid red;
-  border-radius: 10px;
+  box-shadow: 0px 15px 40px #0a0a0a66;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #f3cdcd;
+  border-radius: 15px;
 }
 
 .songbox:hover {
   cursor: pointer;
-  height: 205px;
-  padding: 10px;
-  margin: 20px;
-  width: 155px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  background-color: #b82c2e;
+  border: 2px solid #e21a1a;
+}
+
+.songbox:active {
+  border: 2px solid #2b0101;
+  transition-property: all;
+  transition-duration: 0.1s;
 }
 
 #currentsongimage {
@@ -397,23 +401,25 @@ td.default {
   margin: 15px;
 }
 
-.songimg {
-  margin: 10px;
-  border: 2px solid white;
-  height: 100px;
-  width: 90px;
-  border-radius: 10px;
-}
-
 .songnames {
-  text-align: center;
+  position: relative;
+  top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cec1bf;
   margin: 10px;
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
 }
 
 #trackslist {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 115px;
 }
 
 .controlbtns {
@@ -461,4 +467,27 @@ td.default {
 
 .slider input[type="range"]::-webkit-slider-thumb:hover {
   background: black;
+}
+
+/* custom scroll bar  */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 133, 133);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
