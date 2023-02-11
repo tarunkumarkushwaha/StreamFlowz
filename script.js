@@ -18,7 +18,7 @@ let prevbtn = document.getElementById('prevbtn')
 let nextbtn = document.getElementById('nextbtn')
 // let searchbtn = document.getElementById('searchbtn')
 
-// testing sountracks 
+// testing sountracks SameSite=Strict
 
 // let soundtracks = [{
 //     songname: "Kirby alarm tone",
@@ -110,7 +110,7 @@ const previous = () => {
 
 // EventListeners 
 startpage.addEventListener('click', startpageopener)
-home.addEventListener('click', startpageopener)
+home.addEventListener('click', playlistopener)
 plan.addEventListener('click', planopener)
 signup.addEventListener('click', signupopener)
 playbtn.addEventListener('click', playPause)
@@ -124,8 +124,9 @@ myAudio.addEventListener("timeupdate", () => {
 range.addEventListener('change', () => { myAudio.currentTime = parseInt(range.value * myAudio.duration / 100) })
 
 tracks.addEventListener('click', (e) => {
-    setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
-    playAudio()
+    if(e.target.innerText.length<100){setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
+        playAudio()
+    }
 })
 search.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {

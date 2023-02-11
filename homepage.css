@@ -27,13 +27,13 @@ body {
   border-radius: 10px;
 }
 
-#searchbtn{
+#searchbtn {
   cursor: pointer;
   height: 50px;
   border-radius: 10px;
   margin-left: 2px;
   width: 100px;
-  background-color:#86332b;
+  background-color: #86332b;
   color: aliceblue;
 }
 
@@ -180,7 +180,7 @@ input[type="password"] {
   height: 32px;
   border: none;
   border-bottom: 1px solid #AAA;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -194,7 +194,7 @@ input[type="submit"] {
   border: none;
   border-radius: 2px;
   color: #FFF;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
@@ -225,10 +225,6 @@ input[type="submit"] {
   padding-top: 150px;
   width: 300px;
   height: 400px;
-  background: url('https://goo.gl/YbktSj');
-  background-size: cover;
-  background-position: center;
-  border-radius: 0 2px 2px 0;
 }
 
 button.facebook,
@@ -239,7 +235,7 @@ button.google {
   border: none;
   border-radius: 2px;
   color: #FFF;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   transition: 0.2s ease;
   cursor: pointer;
@@ -257,19 +253,22 @@ button.google {
   background: #DD4B39;
 }
 
-button.google:hover {
+button.google:hover,
+.submit:hover {
   background: #c57c73;
 }
 
 /* plan css */
-h3{
+h3 {
   color: #ffffff;
   text-align: center;
-  margin-bottom: 15px;
+  font-size: x-large;
+  margin-bottom: 30px;
 }
 
 article {
-  padding: 50px;
+  margin-left: 60px;
+  padding: 35px;
   position: relative;
 }
 
@@ -337,7 +336,7 @@ td.default {
 .playercontrols {
   display: flex;
   align-items: center;
-  background-color:#883026;
+  background-color: #883026;
   justify-content: center;
   position: fixed;
   width: 100%;
@@ -436,9 +435,6 @@ td.default {
 }
 
 .slider {
-  /* position: absolute;
-  top: 70%;
-  right: 7%; */
   height: 60px;
   padding: 30px;
   background: #fa9797;
@@ -447,7 +443,7 @@ td.default {
 }
 
 .slider input[type="range"] {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
   width: 420px;
   height: 2px;
   background: black;
@@ -456,7 +452,7 @@ td.default {
 }
 
 .slider input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
   width: 30px;
   height: 30px;
   background: black;
@@ -490,4 +486,68 @@ td.default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background: rgb(207, 88, 88);
+    background: linear-gradient(153deg, rgba(207, 88, 88, 1) 0%, rgba(121, 9, 9, 1) 74%, rgba(250, 163, 163, 1) 100%);
+    background-repeat: no-repeat;
+  }
+
+  .flex-row-center {
+    flex-direction: column;
+  }
+
+  #trackslist {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-left: 10px;
+  }
+
+  .slider {
+    padding: 45px 5px 10px 5px;
+  }
+
+  #search {
+    margin-left: 0px;
+  }
+
+  #startpage {
+    margin: 20px;
+  }
+
+  .songbox {
+    width: auto;
+  }
+
+  .playercontrols {
+    width: 100%;
+    top: 85%;
+  }
+
+  #range {
+    width: auto;
+  }
+
+  .controlbtns {
+    flex-direction: row;
+  }
+
+  #currentsongimage {
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+    margin-bottom: 45px;
+  }
+
+  #currentsongname {
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  article {
+    margin-left: 0px;
+}
 }
