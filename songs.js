@@ -64,21 +64,20 @@ let soundtracks = [{
     bgimage: "https://cdn.pixabay.com/photo/2016/02/13/10/35/tulips-1197602__340.jpg"
 },
 {
-    songname: "pubg",
-    tracklink: "https://soundcloud.com/trapmusichd/pubg-theme-song-2scratch-trap-remix?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-    bgimage: ""
+    songname: "tenderness",
+    tracklink: "https://www.bensound.com/bensound-music/bensound-tenderness.mp3",
+    bgimage: "img/movie7.jpg"
 },
 {
-    songname: "",
-    tracklink: "",
-    bgimage: ""
+    songname: "slowmotion",
+    tracklink: "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
+    bgimage: "img/movie8.jpg"
+},
+{
+    songname: "bensound-dreams",
+    tracklink: "https://www.bensound.com/bensound-music/bensound-dreams.mp3",
+    bgimage: "img/slide2.jpg"
 }
-// ,
-// {
-//     songname: "",
-//     tracklink: "",
-//     bgimage: ""
-// }
 // ,
 // {
 //     songname: "",

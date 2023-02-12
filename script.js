@@ -2,7 +2,7 @@ import { soundtracks } from "/songs.js"
 let startpage = document.getElementById("startpage")
 let home = document.getElementById("home")
 let priceplan = document.getElementById("priceplan")
-let loginbox = document.getElementById("login-box")
+let login = document.getElementById("login")
 let bannertitle = document.getElementById("banner-title")
 let playbtn = document.getElementById('playbtn')
 let myAudio = document.getElementById('myAudio')
@@ -49,7 +49,7 @@ const searcher = () => {
 
 const signupopener = () => {
     bannertitle.setAttribute("class", "invisible")
-    loginbox.removeAttribute("class", "invisible")
+    login.removeAttribute("class", "invisible")
     footer.removeAttribute("class", "invisible")
     priceplan.setAttribute("class", "invisible")
     playlist.setAttribute("class", "invisible")
@@ -61,7 +61,7 @@ const startpageopener = () => {
 
 const planopener = () => {
     bannertitle.setAttribute("class", "invisible")
-    loginbox.setAttribute("class", "invisible")
+    login.setAttribute("class", "invisible")
     priceplan.removeAttribute("class", "invisible")
     footer.removeAttribute("class", "invisible")
     playlist.setAttribute("class", "invisible")
@@ -69,7 +69,7 @@ const planopener = () => {
 
 const playlistopener = () => {
     playlist.removeAttribute("class", "invisible")
-    loginbox.setAttribute("class", "invisible")
+    login.setAttribute("class", "invisible")
     priceplan.setAttribute("class", "invisible")
     bannertitle.setAttribute("class", "invisible")
     footer.setAttribute("class", "invisible")
@@ -124,7 +124,7 @@ myAudio.addEventListener("timeupdate", () => {
 range.addEventListener('change', () => { myAudio.currentTime = parseInt(range.value * myAudio.duration / 100) })
 
 tracks.addEventListener('click', (e) => {
-    if(e.target.innerText.length<100){setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
+    if(e.target.innerText.length<50){setsong = soundtracks.filter(item => item.songname.toLowerCase().includes(e.target.innerText.toLowerCase()))[0]
         playAudio()
     }
 })

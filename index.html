@@ -12,7 +12,6 @@
 
 <body>
     <div class="nav-bar">
-        <div class="flex-row-center">
             <div id="startpage">
                 <h2>StreamFlowzz</h2>
             </div>
@@ -21,7 +20,6 @@
             <div id="signup" class="btn">Sign up</div>
             <input type="text" placeholder="search your songs" name="search" id="search">
             <!-- <button id="searchbtn" type="button">Search</button> -->
-        </div>
     </div>
     <!-- main page  -->
     <div id="banner-title">
@@ -30,7 +28,8 @@
     </div>
 
     <!-- sign up page  -->
-    <div id="login-box" class="invisible">
+    <div id="login" class="invisible">
+    <div id="login-box">
         <div class="leftbox">
             <h1>Sign up</h1>
 
@@ -46,6 +45,7 @@
             <button type="button" class="google">Log in with Google+</button>
         </div>
         <div class="or">OR</div>
+    </div>
     </div>
 
     <!-- priceplan  -->
@@ -167,15 +167,13 @@
             Your browser does not support the audio element.
         </audio>
         <div class="playercontrols">
-            <div class="flex-row-center controlbtns">
-                <img id="currentsongimage" src="img\movie5.jpg" alt="no image">
-                <div class="flex-column-center">
+            <div class="controlbtns">
                     <label id="currentsongname" for="range">Kirby alarm</label>
-                    <div>
+                <div class="flex-row-center">
+                        <img id="currentsongimage" src="img\movie5.jpg" alt="no image">
                         <button id="prevbtn" class="playerbtn" type="button">Prev</button>
                         <button id="playbtn" class="playerbtn" type="button">▶</button>
                         <button id="nextbtn" class="playerbtn" type="button">Next</button>
-                    </div>
                 </div>
             </div>
             <div class="slider">

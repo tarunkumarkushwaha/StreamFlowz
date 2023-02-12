@@ -14,6 +14,7 @@ body {
 
 #startpage {
   cursor: pointer;
+  margin: 10px;
 }
 
 #search {
@@ -52,10 +53,11 @@ body {
 
 .btn {
   cursor: pointer;
-  text-decoration: none;
+  width: 100%;
+  text-align: center;
   border-radius: 15px;
   padding: 20px 30px;
-  margin: 0px;
+  /* margin: 0px; */
 }
 
 .btn:hover {
@@ -65,6 +67,9 @@ body {
 .nav-bar {
   padding: 40px 120px;
   color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 ul li {
@@ -153,10 +158,6 @@ a:hover {
 }
 
 .leftbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
   padding: 40px;
   width: 300px;
   height: 400px;
@@ -390,14 +391,14 @@ td.default {
 }
 
 #currentsongimage {
-  height: 80px;
-  width: 81px;
+  height: 60px;
+  width: 61px;
   border-radius: 15px;
-  margin: 15px;
+  margin: 5px;
 }
 
 #currentsongname {
-  margin: 15px;
+  margin: 5px;
 }
 
 .songnames {
@@ -422,6 +423,9 @@ td.default {
 }
 
 .controlbtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100px;
   padding: 10px;
   margin: 5px;
@@ -494,9 +498,10 @@ td.default {
     background: rgb(207, 88, 88);
     background: linear-gradient(153deg, rgba(207, 88, 88, 1) 0%, rgba(121, 9, 9, 1) 74%, rgba(250, 163, 163, 1) 100%);
     background-repeat: no-repeat;
+    width: auto;
   }
 
-  .flex-row-center {
+  .nav-bar {
     flex-direction: column;
   }
 
@@ -504,7 +509,7 @@ td.default {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 100px;
-    margin-left: 10px;
+    margin-left: 30px;
   }
 
   .slider {
@@ -512,7 +517,9 @@ td.default {
   }
 
   #search {
+    margin-top: 10px;
     margin-left: 0px;
+    width: auto;
   }
 
   #startpage {
@@ -521,33 +528,60 @@ td.default {
 
   .songbox {
     width: auto;
+    margin: 20px;
   }
 
   .playercontrols {
-    width: 100%;
-    top: 85%;
+    height: auto;
+    bottom: 0vh;
   }
 
   #range {
     width: auto;
   }
 
-  .controlbtns {
-    flex-direction: row;
+  .playerbtn {
+    background-color: #db5656;
+    height: 30px;
+    width: 40px;
+    border-radius: 15px;
   }
 
   #currentsongimage {
-    height: 50px;
-    width: 50px;
-    margin: 0px;
-    margin-bottom: 45px;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
   }
 
   #currentsongname {
     margin: 10px;
     margin-bottom: 20px;
   }
+
   article {
     margin-left: 0px;
-}
+  }
+
+  #login-box {
+    width: 325px;
+    height: 600px;
+  }
+
+  .or{
+    left: 50%;
+    top: 65%;
+  }
+
+  .rightbox{
+    top: 50%;
+    right: 5%;
+    height: 298px;
+  }
+
+  .leftbox{
+    width: auto;
+  }
+
 }
